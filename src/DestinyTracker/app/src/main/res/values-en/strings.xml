@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Application
+    <string name="app_name">Destiny Tracker</string>
+    <string name="app_dialog_ok">OK</string>
+    <string name="app_dialog_gotit">Got it!</string>
+    <string name="app_dialog_save">Save</string>
+    <string name="app_dialog_cancel">Cancel</string>
+    <string name="app_card_raid_hard">Hard</string>
+
+    //Menus
+    <string name="main_menu_about">About</string>
+
+    //Dialogs
+    <string name="dialog_about_title">About</string>
+    <string name="dialog_about_description">An application writen for helping all Guardians, in our mission for free the Traveler from the Darkness\'s Claws!</string>
+    <string name="dialog_about_congrats_title">Greatings</string>
+    <string name="dialog_about_congrats">
+        First to Bungie/Activision, for giving us an addictive challenge.\n
+        To Lordes da Guerra group for allowing me to play togheter and laugh a lot .\n
+        To our uppermost group leader Edsonmacgrath for beeing a \"puto\" and helps \"pra caralho\".\n
+        To you using this app and helping make it better.\n
+        To all developers that write all components that I\'m using.\n
+    </string>
+    <string name="dialog_about_license_title">Licenses</string>
+    <string name="dialog_about_copyright_title">Copyright</string>
+    <string name="dialog_about_copyright">
+        Destiny is a Bungie/Activision\'s trademark. All rights reserved. This app was done for helping Destiny\'s players to be organized. No copyright infrigiment was wished.
+    </string>
+
+    //Cards
+    //Atheon
+    <string name="card_atheon_title">Atheon, Time Conflux</string>
+    <string name="card_atheon_grimoire">
+        To speak of Atheon is to accept certain limitations. We are ill-equipped to understand an entity that defies simple causality. Let us accept these limitations and proceed.\nAtheon waits in the Vault of Glass. Just as Atheon sidesteps \'past\' and \'future\', it is impossible to say whether Atheon created the Vault or the Vault created Atheon. Causal pathways converge on Atheon from every axis in the space-time bulk.
+    </string>
+
+</resources>
