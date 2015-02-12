@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,9 +9,9 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="@dimen/flexible_space_image_height"
+        android:paddingTop="225dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/atheon"
-        android:paddingTop="225dp" />
+        android:src="@drawable/atheon"/>
 
     <View
         android:id="@+id/overlay"
@@ -28,90 +29,761 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/body">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/flexible_space_image_height"
-                android:background="@android:color/transparent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:text="@string/card_atheon_grimoire" />
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/atheon_card_normal"
-                    style="@style/RaidCards"
-                    android:onClick="cardsOnClickListener">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/flexible_space_image_height"
+                    android:background="@android:color/transparent" />
 
-                    <RelativeLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/app_card_raid_normal"
-                            android:id="@+id/textView10"
-                            android:layout_alignParentRight="false"
-                            android:layout_alignParentEnd="false"
-                            android:layout_alignParentBottom="true"
-                            android:background="@color/background_floating_material_light"
-                            android:gravity="center_vertical"
-                            android:paddingLeft="10dp" />
-
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/atheon_card_hard"
-                    style="@style/RaidCards"
-                    android:onClick="cardsOnClickListener">
-
-                    <RelativeLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/app_card_raid_hard"
-                            android:id="@+id/textView11"
-                            android:layout_alignParentRight="false"
-                            android:layout_alignParentEnd="false"
-                            android:layout_alignParentBottom="true"
-                            android:background="@color/background_floating_material_light"
-                            android:gravity="center_vertical"
-                            android:paddingLeft="10dp" />
-
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:text="@string/card_atheon_grimoire" />
 
             </LinearLayout>
-        </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/background_floating_material_light">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/atheon_card_normal"
+                    style="@style/RaidCards">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentRight="false"
+                            android:background="@color/background_floating_material_light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="@string/app_card_raid_normal"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TableLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/textView10">
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_checkpoint_header"
+                                    android:id="@+id/textView16"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_char1_header"
+                                    android:id="@+id/textView17"
+                                    android:textColor="#000"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_char2_header"
+                                    android:id="@+id/textView18"
+                                    android:textColor="#000"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_char3_header"
+                                    android:id="@+id/textView19"
+                                    android:textColor="#000"
+                                    android:layout_weight="1" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint1"
+                                    android:id="@+id/textView20"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint1_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint1_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint1_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint2"
+                                    android:id="@+id/textView21"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint2_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint2_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint2_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint3"
+                                    android:id="@+id/textView22"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint3_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint3_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint3_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint4"
+                                    android:id="@+id/textView23"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint4_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint4_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint4_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint5"
+                                    android:id="@+id/textView24"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint5_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint5_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint5_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint6"
+                                    android:id="@+id/textView25"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint6_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint6_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint6_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint7"
+                                    android:id="@+id/textView26"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint7_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint7_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_normal_checkpoint7_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+                        </TableLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/atheon_card_hard"
+                    style="@style/RaidCards"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentRight="false"
+                            android:background="@color/background_floating_material_light"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="@string/app_card_raid_hard"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <TableLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/textView11">
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_checkpoint_header"
+                                    android:id="@+id/textView27"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_char1_header"
+                                    android:id="@+id/textView28"
+                                    android:textColor="#000"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_char2_header"
+                                    android:id="@+id/textView29"
+                                    android:textColor="#000"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/app_card_char3_header"
+                                    android:id="@+id/textView30"
+                                    android:textColor="#000"
+                                    android:layout_weight="1" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint1"
+                                    android:id="@+id/textView31"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint1_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint1_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint1_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint2"
+                                    android:id="@+id/textView32"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint2_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint2_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint2_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint3"
+                                    android:id="@+id/textView33"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint3_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint3_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint3_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint4"
+                                    android:id="@+id/textView34"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint4_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint4_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint4_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint5"
+                                    android:id="@+id/textView35"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint5_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint5_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint5_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint6"
+                                    android:id="@+id/textView36"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint6_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint6_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint6_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="5dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="7dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:text="@string/card_atheon_checkpoint7"
+                                    android:id="@+id/textView37"
+                                    android:textColor="#000"
+                                    android:layout_weight="4" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint7_char1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint7_char2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                                <com.gc.materialdesign.views.CheckBox
+                                    android:id="@+id/atheon_hard_checkpoint7_char3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="#0277bd"
+                                    materialdesign:check="true" />
+
+                            </TableRow>
+                        </TableLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
 
 
     </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
@@ -127,7 +799,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/flexible_space_image_height"
         android:orientation="vertical"
         android:paddingLeft="@dimen/margin_standard">
 

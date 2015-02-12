@@ -3,19 +3,27 @@ package com.labrats.destinytracker;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.gc.materialdesign.views.CheckBox;
+import com.gc.materialdesign.widgets.Dialog;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
+import com.labrats.destinytracker.database.DestinyActivity;
 import com.nineoldandroids.view.ViewHelper;
+
+import java.util.List;
 
 
 public class AtheonActivity extends ActionBarActivity implements ObservableScrollViewCallbacks {
@@ -34,6 +42,9 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
     private int mFabMargin;
     private int mToolbarColor;
     private boolean mFabIsShown;
+
+    //DatabaseList
+    List<DestinyActivity> mRaids;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +88,46 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
                 //mScrollView.scrollTo(0, 0);
             }
         });
+
+        //Verifica se já existe alguma informação da RAID no banco de dados, se não existir eu gero os registros
+        mRaids = DestinyActivity.find(DestinyActivity.class, "type = ? and description = ?", "RAID", "VOG");
+
+        if(mRaids.size() == 0) {
+            //Nivel Normal
+            for(int i = 0; i < 3; i++) {
+                DestinyActivity raid = new DestinyActivity();
+                raid.type = "RAID";
+                raid.description = "VOG";
+                raid.charNumber = i + 1;
+                raid.level = "NORMAL";
+
+                raid.save();
+            }
+
+            //Nível Hard
+            for(int i = 0; i < 3; i++) {
+                DestinyActivity raid = new DestinyActivity();
+                raid.type = "RAID";
+                raid.description = "VOG";
+                raid.charNumber = i + 1;
+                raid.level = "HARD";
+
+                raid.save();
+            }
+        } else {
+            LoadRaidInfo();
+        }
+    }
+
+    private void LoadRaidInfo() {
+        //Char1 Normal
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint1_char1)).setChecked(mRaids.get(0).checkpoint1);
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint2_char1)).setChecked(mRaids.get(0).checkpoint2);
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint3_char1)).setChecked(mRaids.get(0).checkpoint3);
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint4_char1)).setChecked(mRaids.get(0).checkpoint4);
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint5_char1)).setChecked(mRaids.get(0).checkpoint5);
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint6_char1)).setChecked(mRaids.get(0).checkpoint6);
+        ((CheckBox)findViewById(R.id.atheon_normal_checkpoint7_char1)).setChecked(mRaids.get(0).checkpoint7);
     }
 
     @Override
@@ -138,5 +189,38 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
         int actionBarSize = a.getDimensionPixelSize(indexOfAttrTextSize, -1);
         a.recycle();
         return actionBarSize;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch(item.getItemId())
+        {
+            case R.activity_menu.save: {
+                //Char1 Normal
+                mRaids.get(0).checkpoint1 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint1_char1)).isCheck();
+                mRaids.get(0).checkpoint2 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint2_char1)).isCheck();
+                mRaids.get(0).checkpoint3 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint3_char1)).isCheck();
+                mRaids.get(0).checkpoint4 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint4_char1)).isCheck();
+                mRaids.get(0).checkpoint5 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint5_char1)).isCheck();
+                mRaids.get(0).checkpoint6 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint6_char1)).isCheck();
+                mRaids.get(0).checkpoint7 = ((CheckBox)findViewById(R.id.atheon_normal_checkpoint7_char1)).isCheck();
+                mRaids.get(0).save();
+
+            }
+
+            case R.activity_menu.clear: {
+
+            }
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        new MenuInflater(this).inflate(R.menu.menu_activity, menu);
+        return true;
     }
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DestinyTracker.iml" filepath="$PROJECT_DIR$/DestinyTracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/SugarORM/SugarORM.iml" filepath="$PROJECT_DIR$/libs/SugarORM/SugarORM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
