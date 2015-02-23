@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">#0277bd</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="colorAccent">#0277bd</item>
     </style>
 
     <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
@@ -40,7 +41,7 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">10dp</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">470dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="cardCornerRadius">2dp</item>
         <item name="cardBackgroundColor">@color/background_floating_material_light</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>

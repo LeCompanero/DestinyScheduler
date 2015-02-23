@@ -56,6 +56,43 @@
 
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_card_crota"
+            style="@style/HomeCards"
+            android:onClick="cardsOnClickListener">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/crotaCard"
+                    android:src="@drawable/crota"
+                    android:scaleType="centerCrop"
+                    android:paddingTop="240dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/card_crota_title"
+                    android:id="@+id/textView10"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/background_floating_material_light"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp" />
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
 </LinearLayout>

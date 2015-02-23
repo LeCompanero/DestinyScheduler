@@ -65,6 +65,13 @@ public class MainActivity extends ActionBarActivity {
             case R.id.main_card_atheon: {
                 Intent intent = new Intent(MainActivity.this, AtheonActivity.class);
                 startActivity(intent);
+                break;
+            }
+
+            case R.id.main_card_crota: {
+                Intent intent = new Intent(MainActivity.this, CrotaActivity.class);
+                startActivity(intent);
+                break;
             }
         }
     };

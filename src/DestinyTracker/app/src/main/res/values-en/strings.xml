@@ -11,6 +11,12 @@
     <string name="app_card_char1_header">Char 1</string>
     <string name="app_card_char2_header">Char 2</string>
     <string name="app_card_char3_header">Char 3</string>
+    <string name="app_card_chest1_header">1st Chest</string>
+    <string name="app_card_chest2_header">2nd Chest</string>
+    <string name="app_card_chest3_header">3rd Chest</string>
+    <string name="app_card_chest4_header">4th Chest</string>
+    <string name="app_card_chest5_header">5th Chest</string>
+    <string name="app_card_chest6_header">6th Chest</string>
 
     //Menus
     <string name="main_menu_about">About</string>
@@ -33,6 +39,8 @@
     <string name="dialog_about_copyright">
         Destiny is a Bungie/Activision\'s trademark. All rights reserved. This app was done for helping Destiny\'s players to be organized. No copyright infrigiment was wished.
     </string>
+    <string name="dialog_clear_title">Warning</string>
+    <string name="dialog_clear_description">This action will clear all activity data. Would you really like to do that?</string>
 
     //Cards
     //Atheon
@@ -47,6 +55,16 @@
     <string name="card_atheon_checkpoint5">Gorgons</string>
     <string name="card_atheon_checkpoint6">Relics</string>
     <string name="card_atheon_checkpoint7">Atheon</string>
+
+    <string name="card_crota_title">Crota, Son of Oryx</string>
+    <string name="card_crota_grimoire">
+        He hides in the dark below: the monster of Luna, the titanic god-Knight who walked the regolith beneath a sky of green fire and butchered the greatest army of Guardians ever assembled. We abandoned the Moon rather than face him.
+    </string>
+    <string name="card_crota_checkpoint1">The Abyss</string>
+    <string name="card_crota_checkpoint2">Bridge</string>
+    <string name="card_crota_checkpoint3">Shriekers</string>
+    <string name="card_crota_checkpoint4">Ir-yüt</string>
+    <string name="card_crota_checkpoint5">Crota</string>
 
     //Lorem
     <string name="lipsum">Lorem ipsum dolor sit amet, ut duis lorem provident sed felis blandit, condimentum donec lectus ipsum et mauris, morbi porttitor interdum feugiat nulla donec sodales, vestibulum nisl primis a molestie vestibulum quam, sapien mauris metus risus suspendisse magnis. Augue viverra nulla faucibus egestas eu, a etiam id congue rutrum ante, arcu tincidunt donec quam felis at ornare, iaculis ligula sodales venenatis commodo volutpat neque, suspendisse elit praesent tellus felis mi amet. Inceptos amet tempor lectus lorem est non, ac donec ac libero neque mauris, tellus ante metus eget leo consequat. Scelerisque dolor curabitur pretium blandit ut feugiat, amet lacus pulvinar justo convallis ut, sed natoque ipsum urna posuere nibh eu. Sed at sed vulputate sit orci, facilisis a aliquam tellus quam aliquam, eu aliquam donec at molestie ante, pellentesque mauris lorem ultrices libero faucibus porta, imperdiet adipiscing sit hac diam ut nulla. Lacus enim elit pulvinar donec vehicula dapibus, accumsan purus officia cursus dolor sapien, eu amet dis mauris mi nulla ut. Non accusamus etiam pede non urna tempus, vestibulum aliquam tortor eget pharetra sodales, in vestibulum ut justo orci nulla, lobortis purus sem semper consectetuer magni purus. Dolor a leo vestibulum amet ut sit, arcu ut eaque urna fusce aliquet turpis, sed fermentum sed vestibulum nisl pede, tristique enim lorem posuere in laborum ut. Vestibulum id id justo leo nulla, magna lobortis ullamcorper et dignissim pellentesque, duis suspendisse quis id lorem ante. Vivamus a nullam ante adipiscing amet, mi vel consectetuer nunc aenean pede quisque, eget rhoncus dis porttitor habitant nunc vivamus, duis cubilia blandit non donec justo dictumst, praesent vitae nulla nam pulvinar urna. Adipiscing adipiscing justo urna pulvinar imperdiet nullam, vitae fusce rhoncus proin nonummy suscipit, ullamcorper amet et non potenti platea ultrices, mauris nullam sapien nunc justo vel, eu semper pellentesque arcu fusce augue. Malesuada mauris nibh sit a a scelerisque, velit sem lectus tellus convallis consectetuer, ultricies auctor a ante eros amet sed.\n\n

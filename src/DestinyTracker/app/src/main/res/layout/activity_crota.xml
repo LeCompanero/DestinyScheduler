@@ -17,14 +17,14 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/atheon_header">
+                android:id="@+id/crota_header">
 
                 <ImageView
                     android:id="@+id/image"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/parallax_image_height"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/atheon" />
+                    android:src="@drawable/crota" />
 
                 <View
                     android:id="@+id/anchor"
@@ -42,14 +42,14 @@
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
                     android:paddingTop="@dimen/activity_vertical_margin"
-                    android:text="@string/card_atheon_grimoire" />
+                    android:text="@string/card_crota_grimoire" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/atheon_header"
+                android:layout_below="@+id/crota_header"
                 android:background="@color/background_floating_material_light">
 
                 <RelativeLayout
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content">
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/atheon_card_normal"
+                        android:id="@+id/crota_card_normal"
                         style="@style/RaidCards">
 
                         <RelativeLayout
@@ -135,12 +135,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint1"
+                                        android:text="@string/card_crota_checkpoint1"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint1_char1"
+                                        android:id="@+id/crota_normal_checkpoint1_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -148,7 +148,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint1_char2"
+                                        android:id="@+id/crota_normal_checkpoint1_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -156,7 +156,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint1_char3"
+                                        android:id="@+id/crota_normal_checkpoint1_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -176,12 +176,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint2"
+                                        android:text="@string/card_crota_checkpoint2"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint2_char1"
+                                        android:id="@+id/crota_normal_checkpoint2_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -189,7 +189,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint2_char2"
+                                        android:id="@+id/crota_normal_checkpoint2_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -197,7 +197,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint2_char3"
+                                        android:id="@+id/crota_normal_checkpoint2_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -217,12 +217,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint3"
+                                        android:text="@string/card_crota_checkpoint3"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint3_char1"
+                                        android:id="@+id/crota_normal_checkpoint3_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -230,7 +230,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint3_char2"
+                                        android:id="@+id/crota_normal_checkpoint3_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -238,7 +238,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint3_char3"
+                                        android:id="@+id/crota_normal_checkpoint3_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -258,12 +258,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint4"
+                                        android:text="@string/card_crota_checkpoint4"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint4_char1"
+                                        android:id="@+id/crota_normal_checkpoint4_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -271,7 +271,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint4_char2"
+                                        android:id="@+id/crota_normal_checkpoint4_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -279,7 +279,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint4_char3"
+                                        android:id="@+id/crota_normal_checkpoint4_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -299,12 +299,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint5"
+                                        android:text="@string/card_crota_checkpoint5"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint5_char1"
+                                        android:id="@+id/crota_normal_checkpoint5_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -312,7 +312,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint5_char2"
+                                        android:id="@+id/crota_normal_checkpoint5_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -320,89 +320,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint5_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:id="@+id/textView25"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint6"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint6_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint6_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint6_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:id="@+id/textView26"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint7"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint7_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint7_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_checkpoint7_char3"
+                                        android:id="@+id/crota_normal_checkpoint5_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -428,14 +346,14 @@
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_chest1_char1"
+                                        android:id="@+id/crota_normal_chest1_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_chest1_char2"
+                                        android:id="@+id/crota_normal_chest1_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -443,7 +361,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_chest1_char3"
+                                        android:id="@+id/crota_normal_chest1_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -467,53 +385,14 @@
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_chest2_char1"
+                                        android:id="@+id/crota_normal_chest2_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_chest2_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest2_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/app_card_chest3_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest3_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest3_char2"
+                                        android:id="@+id/crota_normal_chest2_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -521,85 +400,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_normal_chest3_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/app_card_chest4_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest4_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest4_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest4_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/app_card_chest5_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest5_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest5_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_normal_chest5_char3"
+                                        android:id="@+id/crota_normal_chest2_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -616,10 +417,10 @@
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/atheon_card_hard"
+                        android:id="@+id/crota_card_hard"
                         style="@style/RaidCards"
                         android:layout_marginBottom="20dp"
-                        android:layout_below="@id/atheon_card_normal">
+                        android:layout_below="@id/crota_card_normal">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -696,12 +497,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint1"
+                                        android:text="@string/card_crota_checkpoint1"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint1_char1"
+                                        android:id="@+id/crota_hard_checkpoint1_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -709,7 +510,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint1_char2"
+                                        android:id="@+id/crota_hard_checkpoint1_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -717,7 +518,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint1_char3"
+                                        android:id="@+id/crota_hard_checkpoint1_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -737,12 +538,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint2"
+                                        android:text="@string/card_crota_checkpoint2"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint2_char1"
+                                        android:id="@+id/crota_hard_checkpoint2_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -750,7 +551,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint2_char2"
+                                        android:id="@+id/crota_hard_checkpoint2_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -758,7 +559,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint2_char3"
+                                        android:id="@+id/crota_hard_checkpoint2_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -778,12 +579,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint3"
+                                        android:text="@string/card_crota_checkpoint3"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint3_char1"
+                                        android:id="@+id/crota_hard_checkpoint3_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -791,7 +592,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint3_char2"
+                                        android:id="@+id/crota_hard_checkpoint3_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -799,7 +600,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint3_char3"
+                                        android:id="@+id/crota_hard_checkpoint3_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -819,12 +620,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint4"
+                                        android:text="@string/card_crota_checkpoint4"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint4_char1"
+                                        android:id="@+id/crota_hard_checkpoint4_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -832,7 +633,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint4_char2"
+                                        android:id="@+id/crota_hard_checkpoint4_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -840,7 +641,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint4_char3"
+                                        android:id="@+id/crota_hard_checkpoint4_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -860,12 +661,12 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="4"
                                         android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint5"
+                                        android:text="@string/card_crota_checkpoint5"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint5_char1"
+                                        android:id="@+id/crota_hard_checkpoint5_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -873,7 +674,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint5_char2"
+                                        android:id="@+id/crota_hard_checkpoint5_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -881,89 +682,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint5_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:id="@+id/textView36"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint6"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint6_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint6_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint6_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:id="@+id/textView37"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/card_atheon_checkpoint7"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint7_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint7_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_checkpoint7_char3"
+                                        android:id="@+id/crota_hard_checkpoint5_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -989,14 +708,14 @@
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_chest1_char1"
+                                        android:id="@+id/crota_hard_chest1_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_chest1_char2"
+                                        android:id="@+id/crota_hard_chest1_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -1004,7 +723,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_chest1_char3"
+                                        android:id="@+id/crota_hard_chest1_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -1028,14 +747,14 @@
                                         android:textColor="#000" />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_chest2_char1"
+                                        android:id="@+id/crota_hard_chest2_char1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_chest2_char2"
+                                        android:id="@+id/crota_hard_chest2_char2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -1043,7 +762,7 @@
                                         />
 
                                     <CheckBox
-                                        android:id="@+id/atheon_hard_chest2_char3"
+                                        android:id="@+id/crota_hard_chest2_char3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -1052,122 +771,6 @@
 
                                 </TableRow>
 
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/app_card_chest3_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest3_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest3_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest3_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/app_card_chest4_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest4_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest4_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest4_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
-
-                                <TableRow
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="fill_parent"
-                                    android:layout_margin="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="4"
-                                        android:paddingTop="7dp"
-                                        android:text="@string/app_card_chest5_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest5_char1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest5_char2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                    <CheckBox
-                                        android:id="@+id/atheon_hard_chest5_char3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-
-                                        />
-
-                                </TableRow>
                             </TableLayout>
 
                         </RelativeLayout>
