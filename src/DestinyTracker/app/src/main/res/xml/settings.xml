@@ -8,21 +8,21 @@
             android:key="pref_key_char1"
             android:title="@string/settings_charList1_header"
             android:entries="@array/settings_char_type_list"
-            android:entryValues="@array/settings_char_type_list"
+            android:entryValues="@array/settings_char_type_values"
             android:defaultValue="0"/>
 
         <ListPreference
             android:key="pref_key_char2"
             android:title="@string/settings_charList2_header"
             android:entries="@array/settings_char_type_list"
-            android:entryValues="@array/settings_char_type_list"
+            android:entryValues="@array/settings_char_type_values"
             android:defaultValue="0"/>
 
         <ListPreference
             android:key="pref_key_char3"
             android:title="@string/settings_charList3_header"
             android:entries="@array/settings_char_type_list"
-            android:entryValues="@array/settings_char_type_list"
+            android:entryValues="@array/settings_char_type_values"
             android:defaultValue="0"/>
 
     </PreferenceCategory>
