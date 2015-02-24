@@ -96,32 +96,26 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
-                                    <TextView
-                                        android:id="@+id/textView17"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="@string/app_card_char1_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:id="@+id/imgBadgeChar1Normal"
+                                        android:src="@drawable/warlock_badge"
+                                        android:layout_weight="1" />
 
-                                    <TextView
-                                        android:id="@+id/textView18"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="@string/app_card_char2_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:id="@+id/imgBadgeChar2Normal"
+                                        android:src="@drawable/warlock_badge"
+                                        android:layout_weight="1" />
 
-                                    <TextView
-                                        android:id="@+id/textView19"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="@string/app_card_char3_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:id="@+id/imgBadgeChar3Normal"
+                                        android:src="@drawable/warlock_badge"
+                                        android:layout_weight="1" />
                                 </TableRow>
 
                                 <TableRow
@@ -458,32 +452,26 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#000" />
 
-                                    <TextView
-                                        android:id="@+id/textView28"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="@string/app_card_char1_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:id="@+id/imgBadgeChar1Hard"
+                                        android:src="@drawable/warlock_badge"
+                                        android:layout_weight="1" />
 
-                                    <TextView
-                                        android:id="@+id/textView29"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="@string/app_card_char2_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:id="@+id/imgBadgeChar2Hard"
+                                        android:src="@drawable/warlock_badge"
+                                        android:layout_weight="1" />
 
-                                    <TextView
-                                        android:id="@+id/textView30"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="@string/app_card_char3_header"
-                                        android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#000" />
+                                    <ImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:id="@+id/imgBadgeChar3Hard"
+                                        android:src="@drawable/warlock_badge"
+                                        android:layout_weight="1" />
                                 </TableRow>
 
                                 <TableRow

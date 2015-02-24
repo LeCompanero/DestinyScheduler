@@ -55,8 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/dialog_about_license_title"
-        android:id="@+id/textView6" />
+        android:text="@string/dialog_about_license_title" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -134,8 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/dialog_about_copyright_title"
-        android:id="@+id/textView14" />
+        android:text="@string/dialog_about_copyright_title" />
 
     <TextView
         android:layout_width="wrap_content"

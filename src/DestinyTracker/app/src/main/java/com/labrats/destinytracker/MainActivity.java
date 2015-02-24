@@ -54,7 +54,17 @@ public class MainActivity extends ActionBarActivity {
 
                 dlg.setButtonCancel(null);
                 dlg.getButtonAccept().setText(getString(R.string.app_dialog_gotit));
+                return true;
             }
+
+            case R.main_menu.settings: {
+
+                Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
+                startActivity(intent);
+
+                return true;
+            }
+
             default:
                 return super.onOptionsItemSelected(item);
         }

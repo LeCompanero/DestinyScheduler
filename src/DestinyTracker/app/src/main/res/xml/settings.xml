@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/settings_category_header"
+        android:key="pref_key_storage_settings">
+
+        <ListPreference
+            android:key="pref_key_char1"
+            android:title="@string/settings_charList1_header"
+            android:entries="@array/settings_char_type_list"
+            android:entryValues="@array/settings_char_type_list"
+            android:defaultValue="0"/>
+
+        <ListPreference
+            android:key="pref_key_char2"
+            android:title="@string/settings_charList2_header"
+            android:entries="@array/settings_char_type_list"
+            android:entryValues="@array/settings_char_type_list"
+            android:defaultValue="0"/>
+
+        <ListPreference
+            android:key="pref_key_char3"
+            android:title="@string/settings_charList3_header"
+            android:entries="@array/settings_char_type_list"
+            android:entryValues="@array/settings_char_type_list"
+            android:defaultValue="0"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

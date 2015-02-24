@@ -1,8 +1,10 @@
 package com.labrats.destinytracker;
 
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +14,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gc.materialdesign.views.ButtonFlat;
@@ -89,6 +93,54 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
             LoadRaidInfoNormal();
             LoadRaidInfoHard();
         }
+
+        //Carrego as configurações para ler o char que está lá e trocar a badge dele
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        switch(prefs.getString("pref_key_char1", "")) {
+            case "Warlock": {
+                ((ImageView)findViewById(R.id.imgBadgeChar1Normal)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar1Hard)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
+            } break;
+            case "Titan": {
+                ((ImageView)findViewById(R.id.imgBadgeChar1Normal)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar1Hard)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
+            } break;
+            case "Hunter": {
+                ((ImageView)findViewById(R.id.imgBadgeChar1Normal)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar1Hard)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
+            } break;
+        }
+
+        switch(prefs.getString("pref_key_char2", "")) {
+            case "Warlock": {
+                ((ImageView)findViewById(R.id.imgBadgeChar2Normal)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar2Hard)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
+            } break;
+            case "Titan": {
+                ((ImageView)findViewById(R.id.imgBadgeChar2Normal)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar2Hard)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
+            } break;
+            case "Hunter": {
+                ((ImageView)findViewById(R.id.imgBadgeChar2Normal)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar2Hard)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
+            } break;
+        }
+
+        switch(prefs.getString("pref_key_char3", "")) {
+            case "Warlock": {
+                ((ImageView)findViewById(R.id.imgBadgeChar3Normal)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar3Hard)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
+            } break;
+            case "Titan": {
+                ((ImageView)findViewById(R.id.imgBadgeChar3Normal)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar3Hard)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
+            } break;
+            case "Hunter": {
+                ((ImageView)findViewById(R.id.imgBadgeChar3Normal)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
+                ((ImageView)findViewById(R.id.imgBadgeChar3Hard)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
+            } break;
+        }
     }
 
     private void LoadRaidInfoNormal() {
@@ -154,6 +206,12 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
         ((CheckBox)findViewById(R.id.atheon_hard_chest4_char1)).setChecked(mRaids.get(3).chest4);
         ((CheckBox)findViewById(R.id.atheon_hard_chest5_char1)).setChecked(mRaids.get(3).chest5);
 
+        ((CheckBox)findViewById(R.id.atheon_hard_chest1_char1)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest2_char1)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest3_char1)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest4_char1)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest5_char1)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+
         //Char2 Hard
         ((CheckBox)findViewById(R.id.atheon_hard_checkpoint1_char2)).setChecked(mRaids.get(4).checkpoint1);
         ((CheckBox)findViewById(R.id.atheon_hard_checkpoint2_char2)).setChecked(mRaids.get(4).checkpoint2);
@@ -169,6 +227,12 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
         ((CheckBox)findViewById(R.id.atheon_hard_chest4_char2)).setChecked(mRaids.get(4).chest4);
         ((CheckBox)findViewById(R.id.atheon_hard_chest5_char2)).setChecked(mRaids.get(4).chest5);
 
+        ((CheckBox)findViewById(R.id.atheon_hard_chest1_char2)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest2_char2)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest3_char2)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest4_char2)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest5_char2)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+
         //Char3 Hard
         ((CheckBox)findViewById(R.id.atheon_hard_checkpoint1_char3)).setChecked(mRaids.get(5).checkpoint1);
         ((CheckBox)findViewById(R.id.atheon_hard_checkpoint2_char3)).setChecked(mRaids.get(5).checkpoint2);
@@ -183,6 +247,12 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
         ((CheckBox)findViewById(R.id.atheon_hard_chest3_char3)).setChecked(mRaids.get(5).chest3);
         ((CheckBox)findViewById(R.id.atheon_hard_chest4_char3)).setChecked(mRaids.get(5).chest4);
         ((CheckBox)findViewById(R.id.atheon_hard_chest5_char3)).setChecked(mRaids.get(5).chest5);
+
+        ((CheckBox)findViewById(R.id.atheon_hard_chest1_char3)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest2_char3)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest3_char3)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest4_char3)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
+        ((CheckBox)findViewById(R.id.atheon_hard_chest5_char3)).setOnCheckedChangeListener(chestCheckBoxOnCheckedChanged);
     }
 
     @Override
@@ -398,4 +468,68 @@ public class AtheonActivity extends ActionBarActivity implements ObservableScrol
         new MenuInflater(this).inflate(R.menu.menu_activity, menu);
         return true;
     }
+
+    private CompoundButton.OnCheckedChangeListener chestCheckBoxOnCheckedChanged = new CompoundButton.OnCheckedChangeListener() {
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (buttonView.getId() == R.id.atheon_hard_chest1_char1) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest1_char1)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest1_char2) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest1_char2)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest1_char3) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest1_char3)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest2_char1) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest2_char1)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest2_char2) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest2_char2)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest2_char3) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest2_char3)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest3_char1) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest3_char1)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest3_char2) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest3_char2)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest3_char3) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest3_char3)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest4_char1) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest4_char1)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest4_char2) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest4_char2)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest4_char3) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest4_char3)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest5_char1) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest5_char1)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest5_char2) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest5_char2)).setChecked(isChecked);
+            }
+
+            if (buttonView.getId() == R.id.atheon_hard_chest5_char3) {
+                ((CheckBox)findViewById(R.id.atheon_normal_chest5_char3)).setChecked(isChecked);
+            }
+        }
+    };
 }
