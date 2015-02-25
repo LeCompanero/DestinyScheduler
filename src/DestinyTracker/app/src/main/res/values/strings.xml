@@ -70,6 +70,14 @@
     <string name="card_crota_checkpoint4">Ir-yüt</string>
     <string name="card_crota_checkpoint5">Crota</string>
 
+    //Weekly Strikes
+    <string name="card_weekly_title">Assaltos Semanais</string>
+    <string name="card_weekly_grimoire">
+        Nossos inimigos crescem na Treva e enfrentam maiores desafios onde a Luz se encontra. Prepare-se para enfrentar a elite do inimigo em condições perigosas e inconstantes.
+    </string>
+    <string name="card_weekly_checkpoint1">Assalto Semanal</string>
+    <string name="card_weekly_checkpoint2">Assalto Semanal do Anoitecer</string>
+
     //Settings
     <string name="title_activity_preferences">Configurações</string>
     <string name="settings_category_header">Configurar personagens</string>

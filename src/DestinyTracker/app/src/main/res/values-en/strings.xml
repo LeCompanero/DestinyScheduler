@@ -60,6 +60,7 @@
     <string name="card_atheon_checkpoint6">Relics</string>
     <string name="card_atheon_checkpoint7">Atheon</string>
 
+    //Crota
     <string name="card_crota_title">Crota, Son of Oryx</string>
     <string name="card_crota_grimoire">
         He hides in the dark below: the monster of Luna, the titanic god-Knight who walked the regolith beneath a sky of green fire and butchered the greatest army of Guardians ever assembled. We abandoned the Moon rather than face him.
@@ -69,6 +70,14 @@
     <string name="card_crota_checkpoint3">Shriekers</string>
     <string name="card_crota_checkpoint4">Ir-yüt</string>
     <string name="card_crota_checkpoint5">Crota</string>
+
+    //Weekly Strikes
+    <string name="card_weekly_title">Weekly Strikes</string>
+    <string name="card_weekly_grimoire">
+        Our enemies thrive among the Darkness, and where it gathers the Light will face great challenges. Expect to face the enemy\'s elite under shifting, dangerous conditions.
+    </string>
+    <string name="card_weekly_checkpoint1">Weekly Strike</string>
+    <string name="card_weekly_checkpoint2">Weekly Nightfall Strike</string>
 
     //Settings
     <string name="title_activity_preferences">Settings</string>

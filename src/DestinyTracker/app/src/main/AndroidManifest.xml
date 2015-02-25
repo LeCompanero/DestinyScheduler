@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.labrats.destinytracker"
     android:versionCode="1"
-    android:versionName="1.1">
+    android:versionName="1.2">
 
     <application
         android:name=".DestinyTracker"
@@ -31,6 +31,13 @@
         <activity
             android:name=".CrotaActivity"
             android:label="@string/card_crota_title" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".WeeklyActivity"
+            android:label="@string/card_weekly_title" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

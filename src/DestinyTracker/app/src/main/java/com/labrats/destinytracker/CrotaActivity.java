@@ -95,45 +95,45 @@ public class CrotaActivity extends ActionBarActivity implements ObservableScroll
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         switch(prefs.getString("pref_key_char1", "")) {
-            case "Warlock": {
+            case "A": {
                 ((ImageView)findViewById(R.id.imgBadgeChar1Normal)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar1Hard)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
             } break;
-            case "Titan": {
+            case "T": {
                 ((ImageView)findViewById(R.id.imgBadgeChar1Normal)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar1Hard)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
             } break;
-            case "Hunter": {
+            case "C": {
                 ((ImageView)findViewById(R.id.imgBadgeChar1Normal)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar1Hard)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
             } break;
         }
 
         switch(prefs.getString("pref_key_char2", "")) {
-            case "Warlock": {
+            case "A": {
                 ((ImageView)findViewById(R.id.imgBadgeChar2Normal)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar2Hard)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
             } break;
-            case "Titan": {
+            case "T": {
                 ((ImageView)findViewById(R.id.imgBadgeChar2Normal)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar2Hard)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
             } break;
-            case "Hunter": {
+            case "C": {
                 ((ImageView)findViewById(R.id.imgBadgeChar2Normal)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar2Hard)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
             } break;
         }
 
         switch(prefs.getString("pref_key_char3", "")) {
-            case "Warlock": {
+            case "A": {
                 ((ImageView)findViewById(R.id.imgBadgeChar3Normal)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar3Hard)).setImageDrawable(getResources().getDrawable(R.drawable.warlock_badge));
             } break;
-            case "Titan": {
+            case "T": {
                 ((ImageView)findViewById(R.id.imgBadgeChar3Normal)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar3Hard)).setImageDrawable(getResources().getDrawable(R.drawable.titan_badge));
             } break;
-            case "Hunter": {
+            case "C": {
                 ((ImageView)findViewById(R.id.imgBadgeChar3Normal)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
                 ((ImageView)findViewById(R.id.imgBadgeChar3Hard)).setImageDrawable(getResources().getDrawable(R.drawable.hunter_badge));
             } break;

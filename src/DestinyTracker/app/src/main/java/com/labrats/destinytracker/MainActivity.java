@@ -83,6 +83,12 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
                 break;
             }
+
+            case R.id.main_card_weekly: {
+                Intent intent = new Intent(MainActivity.this, WeeklyActivity.class);
+                startActivity(intent);
+                break;
+            }
         }
     };
 }
